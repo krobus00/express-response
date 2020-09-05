@@ -25,7 +25,7 @@ message and data is optional parameter
 
 ```javascript
 app.get('/', (req, res) => {
-	response.ok(res, 'EXAMPLE', {rank: 1, name: 'express'})
+	res.json(response.ok('EXAMPLE', {rank: 1, name: 'express'}))
 })
 ```
 
@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
 
 ```javascript
 app.post('/', (req, res) => {
-	response.created(res)
+	res.json(response.created())
 })
 ```
 
@@ -65,7 +65,7 @@ app.get('/', (req, res) => {
 		message: 'example',
 		data: {},
 	}
-	response.response(res, responseData.status, responseData)
+	response.response(responseData)
 })
 ```
 
